@@ -40,3 +40,6 @@ def load_approaches(cad_json_path):
                 d[7]) if data_attribute_name[7] != "" else float('nan') 
             approach_list.append(CloseApproach(**tmp))
     return approach_list
+
+
+

@@ -38,7 +38,6 @@ class AttributeFilter:
     Concrete subclasses can override the `get` classmethod to provide custom
     behavior to fetch a desired attribute from the given `CloseApproach`.
     """
-
     def __init__(self, op, value):
         """Construct a new `AttributeFilter` from an binary predicate and a reference value.
 
@@ -126,9 +125,9 @@ def create_filters(date=None, start_date=None, end_date=None,
         created_filter['diameter_min'] = diameter_min
     if diameter_max:
         created_filter['diameter_max'] = diameter_max
-    if hazardous == True:
+    if hazardous is True:
         created_filter['hazardous'] = True
-    elif hazardous == False:
+    elif hazardous is False:
         created_filter['hazardous'] = False
     return created_filter
 
